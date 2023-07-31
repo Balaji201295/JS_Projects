@@ -44,8 +44,13 @@ async function checkWeather(city) {
   }
 }
 
-searchBtn.addEventListener("click", () => {
-  checkWeather(searchBox.value);
-});
+// When the search button is clicked, call checkWeather with the value from the search box.
+searchBtn.addEventListener("click", () => checkWeather(searchBox.value));
 
+// When a key is pressed inside the search box, check if it's the Enter key, and if so, call checkWeather with the current value in the search box.
+searchBox.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    checkWeather(searchBox.value);
+  }
+});
 checkWeather();
