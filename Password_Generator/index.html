@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!--font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="password-generator">
+              <h1 class="fw-medium">
+                Generate a <br /><span class="pb-2">Random password</span>
+              </h1>
+              <div
+                class="display mt-5 mb-3 bg-white d-flex align-items-center justify-content-center p-2 p-md-3"
+              >
+                <input
+                  type="text"
+                  name="text"
+                  class="form-control bg-transparent"
+                  id="password"
+                  placeholder="Password"
+                  readonly
+                />
+                <span class="input-icon" onclick="copyPassword()"
+                  ><i class="fa-solid fa-copy"></i
+                ></span>
+              </div>
+              <button
+                type="button"
+                class="p-2 px-md-4 py-md-3"
+                onclick="createPassword()"
+              >
+                <span class="button-icon"><i class="fa-solid fa-bolt"></i></span
+                >Generate Password
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
