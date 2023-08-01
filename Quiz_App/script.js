@@ -86,14 +86,15 @@ function selectAnswer(e) {
   nextButton.style.display = "block";
 }
 
-// Quiz final score function
+// Quiz next button clicking function
 
-function showScore() {
-  resetState();
-  questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
-  nextButton.innerHTML = "Play Again";
-  nextButton.style.display = "block";
-}
+nextButton.addEventListener("click", () => {
+  if (currentQuestionIndex < questions.length) {
+    handleNextButton();
+  } else {
+    startQuiz();
+  }
+});
 
 // Quiz next button handle function
 
@@ -105,15 +106,13 @@ function handleNextButton() {
     showScore();
   }
 }
+// Quiz final score function
 
-// Quiz next button clicking function
-
-nextButton.addEventListener("click", () => {
-  if (currentQuestionIndex < questions.length) {
-    handleNextButton();
-  } else {
-    startQuiz();
-  }
-});
+function showScore() {
+  resetState();
+  questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+  nextButton.innerHTML = "Play Again";
+  nextButton.style.display = "block";
+}
 
 startQuiz();
