@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 1rem;
+  font-family: "Playfair Display", serif;
+  background: #a2bcee;
+}
+button,
+button:focus,
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+.height-100 {
+  min-height: 100vh;
+}
+.quote-box {
+  overflow: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+h2 {
+  font-size: 2rem;
+}
+h2::after {
+  content: "";
+  position: absolute;
+  width: 7.5rem;
+  height: 0.25rem;
+  border-radius: 3px;
+  background: rgb(23, 124, 229);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+blockquote {
+  font-size: 1.5rem;
+  min-height: 7.5rem;
+}
+blockquote::before,
+blockquote::after {
+  content: '"';
+}
+.quote-box p {
+  float: right;
+}
+.quote-box p::before {
+  content: "";
+  position: absolute;
+  width: 1.25rem;
+  height: 0.1rem;
+  background: rgb(23, 124, 229);
+  top: 50%;
+  left: -30px;
+}
+.quote-btns .btn {
+  background: rgb(23, 124, 229);
+  color: #fff;
+  border-radius: 25px;
+  border: 0.1rem solid rgb(23, 124, 229);
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.quote-btns .btn:hover {
+  background: transparent;
+  color: rgb(23, 124, 229);
+}
+.btn .fab {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.quote-btns .twitter-btn {
+  background: transparent;
+  color: #333;
+  border-color: #333;
+}
+.quote-btns .twitter-btn:hover {
+  background: #333;
+  color: #fff;
+}
